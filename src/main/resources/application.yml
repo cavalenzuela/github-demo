@@ -1,0 +1,17 @@
+app:
+  name: @project.artifactId@
+  version: @project.version@
+
+spring:
+  profiles:
+    active: @spring.profiles.active@
+  datasource:
+    url: jdbc:oracle:thin:${$DB_HOST}:${DB_PORT}/${DB_SERVICE_NAME}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /docs
